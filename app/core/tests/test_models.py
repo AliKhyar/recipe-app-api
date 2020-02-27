@@ -20,3 +20,13 @@ class ModelTests(TestCase):
         user = get_user_model().objects.create_user(email, 'test123')
 
         self.assertEqual(user.email,email.lower())
+
+    def test_new_seper_user(self):
+        """test creating a new super user"""
+        user = get_user_model().objects.create_superuser(
+            'ali@hi.fr',
+            'test123'
+        )
+
+        self.assertTrue(user.is_superuser)
+        self.assertTrue(user.is_staff)
