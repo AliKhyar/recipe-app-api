@@ -120,4 +120,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+## for cusomized User
 AUTH_USER_MODEL = 'core.User'
